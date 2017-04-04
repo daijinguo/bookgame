@@ -3,11 +3,11 @@ package android.dai.bookgame;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.dai.bookgame.activities.opengles3x.chap3.SimpleTriangle;
 import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.Animation;
-import android.view.animation.AnimationSet;
 import android.view.animation.TranslateAnimation;
 import android.widget.TextView;
 
@@ -81,7 +81,7 @@ class MainItemViewsUtility {
             }
         }));
 
-        mViews.add(createView("click start an animition", new View.OnClickListener() {
+        mViews.add(createView("click start an animation", new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 TranslateAnimation translate = new TranslateAnimation(-v.getWidth() / 4, v.getWidth() / 4, 0, 0);
@@ -100,9 +100,28 @@ class MainItemViewsUtility {
                 mActivity.startActivity(intent);
             }
         }));
+
+        mViews.add(createView("empty demo", new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        }));
     }
 
     private void postViews() {
+        // the follow activity for book
+        // OpenGL ES 3.x game developer
 
+        /**
+         * chap3 simple triangle
+         */
+        mViews.add(createView("chap3: simple triangle", new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mActivity, SimpleTriangle.class);
+                mActivity.startActivity(intent);
+            }
+        }));
     }
 }
