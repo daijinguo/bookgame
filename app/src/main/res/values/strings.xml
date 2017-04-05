@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Learn 3D</string>
+
+    <string name="str_chap3_1">chap3: simple triangle</string>
 </resources>

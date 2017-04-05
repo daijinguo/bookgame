@@ -116,12 +116,13 @@ class MainItemViewsUtility {
         /**
          * chap3 simple triangle
          */
-        mViews.add(createView("chap3: simple triangle", new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(mActivity, SimpleTriangle.class);
-                mActivity.startActivity(intent);
-            }
-        }));
+        mViews.add(createView(mActivity.getResources().getString(R.string.str_chap3_1),
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(mActivity, SimpleTriangle.class);
+                        mActivity.startActivity(intent);
+                    }
+                }));
     }
 }
