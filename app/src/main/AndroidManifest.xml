@@ -23,6 +23,7 @@
             android:name=".activities.opengles3x.chap3.SimpleTriangle"
             android:label="@string/str_chap3_1"
             android:launchMode="singleTask" />
+        <activity android:name=".activities.opengles3x.chap5.Ch5OneActivity"></activity>
     </application>
 
 </manifest>

@@ -4,6 +4,7 @@ package android.dai.bookgame;
 import android.app.Activity;
 import android.content.Intent;
 import android.dai.bookgame.activities.opengles3x.chap3.SimpleTriangle;
+import android.dai.bookgame.activities.opengles3x.chap5.Ch5OneActivity;
 import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -121,6 +122,18 @@ class MainItemViewsUtility {
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent(mActivity, SimpleTriangle.class);
+                        mActivity.startActivity(intent);
+                    }
+                }));
+
+        /**
+         * chap5
+         */
+        mViews.add(createView(mActivity.getResources().getString(R.string.str_chap5_1),
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(mActivity, Ch5OneActivity.class);
                         mActivity.startActivity(intent);
                     }
                 }));
