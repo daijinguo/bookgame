@@ -36,6 +36,19 @@ public class MatrixState {
         );
     }
 
+    // 设置透视投影
+    public static void setProjectFrustum(
+            float left, float right,  // near面 left right
+            float bottom, float top,  // near面 bottom top
+            float near, float far     // near面 far面与视点距离
+    ) {
+        Matrix.frustumM(programMatrix_, 0,
+                left, right,
+                bottom, top,
+                near, far
+        );
+    }
+
     // 获取具体物体总体变换矩阵
     public static float[] getFinalMatrix(float[] spec) {
         // 存储最终变换矩阵

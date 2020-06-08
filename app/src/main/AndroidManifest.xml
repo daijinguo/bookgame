@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".chap.ch5_2.ActivityCh5_2"
+            android:label="chap5.2">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".chap.ch5_1.ActivityCh5_1"
             android:label="chap5.1">
             <intent-filter>
@@ -21,11 +30,14 @@
         <activity
             android:name=".MainActivity"
             android:label="main">
+
+            <!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            -->
         </activity>
     </application>
 

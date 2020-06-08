@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class ActivityCh5_1 extends AppCompatActivity {
 
-    private DisplaySurfaceView surfaceView_;
+    private StarSurfaceView surfaceView_;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +22,7 @@ public class ActivityCh5_1 extends AppCompatActivity {
         );
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        surfaceView_ = new DisplaySurfaceView(this);
+        surfaceView_ = createView();
         setContentView(surfaceView_);
 
         surfaceView_.requestFocus();
@@ -39,5 +39,9 @@ public class ActivityCh5_1 extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         surfaceView_.onPause();
+    }
+
+    protected StarSurfaceView createView() {
+        return new StarSurfaceView(this);
     }
 }
